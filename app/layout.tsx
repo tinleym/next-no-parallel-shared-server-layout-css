@@ -1,8 +1,10 @@
-export default function RootLayout({ children }) {
+const auth = "REGISTERED";
+
+export default function RootLayout({ guest, registered }) {
   return (
     <html>
       <head />
-      <body>{children}</body>
+      <body>{auth === "REGISTERED" ? registered : guest}</body>
     </html>
-  )
+  );
 }
